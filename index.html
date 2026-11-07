@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mokko Studio · Kattiku</title>
+<meta name="description" content="Mokko Studio fait de petits jeux de logique, doux et malins. Contact et assistance pour Kattiku.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="mokko.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className='js';</script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="index.html"><img src="mokko.svg" alt="" width="40" height="40"><span>Mokko Studio</span></a>
+  <div class="lang no-js-hide" role="group" aria-label="Langue / Language">
+    <button type="button" data-set="fr" aria-pressed="true">FR</button>
+    <button type="button" data-set="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+<main>
+<div data-l="fr" lang="fr">
+<div class="hero"><img src="mokko.svg" alt="" width="120" height="128"><div>
+<h1>Mokko Studio</h1>
+<p class="lead">De petits jeux de logique, doux et malins.</p></div></div>
+<div class="card">
+<h2>Kattiku</h2>
+<p>Un puzzle de logique tout doux : place un chat dans chaque ligne, chaque colonne et chaque zone de couleur, sans que deux chats se touchent. Chaque grille a une seule solution.</p>
+<p>Bientôt sur l'App Store et Google Play.</p>
+</div>
+<div class="card" id="contact">
+<h2>Contact et assistance</h2>
+<p>Une question, un problème, une idée ? Écris-nous : <a href="mailto:mokkostudioo@gmail.com">mokkostudioo@gmail.com</a>. Nous répondons en français et en anglais.</p>
+<p>Pour un achat : les remboursements passent par Apple ou Google, et le bouton « Restaurer mes achats » dans les Réglages de Kattiku retrouve tes achats sur un nouvel appareil.</p>
+</div>
+<h2>Documents</h2>
+<div class="links"><a href="privacy.html">Politique de confidentialité</a><a href="terms.html">Conditions d'utilisation</a></div>
+</div>
+<div data-l="en" lang="en">
+<div class="hero"><img src="mokko.svg" alt="" width="120" height="128"><div>
+<h1>Mokko Studio</h1>
+<p class="lead">Small logic games, gentle and clever.</p></div></div>
+<div class="card">
+<h2>Kattiku</h2>
+<p>A gentle logic puzzle: put one cat in every row, every column and every colour zone, with no two cats touching. Every grid has a single solution.</p>
+<p>Coming soon to the App Store and Google Play.</p>
+</div>
+<div class="card" id="contact-en">
+<h2>Contact and support</h2>
+<p>A question, a problem, an idea? Write to us: <a href="mailto:mokkostudioo@gmail.com">mokkostudioo@gmail.com</a>. We reply in French and English.</p>
+<p>About purchases: refunds are handled by Apple or Google, and the "Restore my purchases" button in Kattiku's Settings recovers your purchases on a new device.</p>
+</div>
+<h2>Documents</h2>
+<div class="links"><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a></div>
+</div>
+</main>
+<footer>
+  <nav>
+    <a href="index.html"><span data-l="fr">Accueil</span><span data-l="en">Home</span></a>
+    <a href="privacy.html"><span data-l="fr">Politique de confidentialité</span><span data-l="en">Privacy policy</span></a>
+    <a href="terms.html"><span data-l="fr">Conditions d'utilisation</span><span data-l="en">Terms of use</span></a>
+    <a href="mailto:mokkostudioo@gmail.com">mokkostudioo@gmail.com</a>
+  </nav>
+  <div>© 2026 Mokko Studio</div>
+</footer>
+</div>
+<script>
+(function () {
+  var T = { fr: { t: 'Mokko Studio · Kattiku', d: 'Mokko Studio fait de petits jeux de logique, doux et malins. Contact et assistance pour Kattiku.' }, en: { t: 'Mokko Studio · Kattiku', d: 'Mokko Studio makes small logic games, gentle and clever. Contact and support for Kattiku.' } };
+  var root = document.documentElement;
+  var q = (location.search.match(/[?&]lang=(fr|en)/) || [])[1];
+  var lang = q || (((navigator.language || 'fr').slice(0, 2) === 'fr') ? 'fr' : 'en');
+  function apply(l) {
+    lang = l; root.setAttribute('data-lang', l); root.lang = l;
+    document.title = T[l].t;
+    var m = document.querySelector('meta[name=description]'); if (m) m.setAttribute('content', T[l].d);
+    var bs = document.querySelectorAll('.lang button');
+    for (var i = 0; i < bs.length; i++) bs[i].setAttribute('aria-pressed', String(bs[i].getAttribute('data-set') === l));
+    var as = document.querySelectorAll('a[href]');
+    for (var j = 0; j < as.length; j++) {
+      var h = as[j].getAttribute('href');
+      if (/^(index|privacy|terms)\.html/.test(h)) { h = h.replace(/\?lang=(fr|en)/, ''); var hash = ''; var k = h.indexOf('#'); if (k >= 0) { hash = h.slice(k); h = h.slice(0, k); } as[j].setAttribute('href', h + '?lang=' + l + hash); }
+    }
+    try { history.replaceState(null, '', location.pathname + '?lang=' + l + location.hash); } catch (e) {}
+  }
+  document.addEventListener('click', function (e) { var b = e.target.closest && e.target.closest('[data-set]'); if (b) apply(b.getAttribute('data-set')); });
+  apply(lang);
+})();
+</script>
+</body>
+</html>

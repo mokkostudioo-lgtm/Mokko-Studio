@@ -1,0 +1,21 @@
+MINI-SITE MOKKO STUDIO (à héberger gratuitement)
+
+Fichiers : index.html (accueil + contact/assistance), privacy.html (politique de confidentialité),
+terms.html (conditions d'utilisation), style.css, mokko.svg. Tout fonctionne sans connexion à un service extérieur.
+
+HÉBERGER SUR GITHUB PAGES (gratuit)
+1. Crée un compte sur github.com (gratuit). Choisis un pseudo simple, comme mokkostudio : il apparaîtra dans l'adresse.
+2. Clique sur « + » puis « New repository ». Nom : mokko-studio. Choisis « Public », puis « Create repository ».
+3. Clique sur « uploading an existing file », glisse les 5 fichiers de ce dossier (dézippé), puis « Commit changes ».
+4. Va dans Settings, puis Pages. Source : « Deploy from a branch ». Branch : main, dossier « / (root) ». Clique sur Save.
+5. Après une ou deux minutes, ton site est en ligne : https://TON-PSEUDO.github.io/mokko-studio/
+
+ADRESSES À DONNER AUX STORES
+- URL de la politique de confidentialité : https://TON-PSEUDO.github.io/mokko-studio/privacy.html
+- URL d'assistance (Apple « Support URL ») : https://TON-PSEUDO.github.io/mokko-studio/
+- Conditions d'utilisation : https://TON-PSEUDO.github.io/mokko-studio/terms.html
+
+À SAVOIR
+- La date « Dernière mise à jour » (7 novembre 2026) est écrite dans privacy.html et terms.html : change-la si tu modifies les textes.
+- Dis-le moi si les textes changent (publicités réelles, achats, nouvelle fonction) : il faudra mettre la page à jour.
+- Ce sont des modèles à relire, pas un avis juridique.
